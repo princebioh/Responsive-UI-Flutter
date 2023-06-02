@@ -5,19 +5,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Responsive App"),
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: const Icon(Icons.person),
-            title: Text("Person ${index + 1}"),
-            trailing: const Icon(Icons.pin_drop_outlined),
-          );
-        },
-        itemCount: 50,
+      body: Center(
+        child: Text("Width = $width\nHeight = $height"),
       ),
     );
   }

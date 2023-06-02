@@ -7,13 +7,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+    final orientation = MediaQuery.of(context).orientation;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("Responsive App"),
       ),
       body: Center(
-        child: Text("Width = $width\nHeight = $height"),
+        child: Text("Width = $width\nHeight = $height\nOrientation = $orientation"),
       ),
     );
   }

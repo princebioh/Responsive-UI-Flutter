@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (context, index) {
           return ListTile(
-            leading: Icon(Icons.person),
+            leading: const Icon(Icons.person),
             title: Text("Person ${index + 1}"),
-            trailing: Icon(Icons.pin_drop_outlined),
+            trailing: const Icon(Icons.pin_drop_outlined),
           );
         },
         itemCount: 50,

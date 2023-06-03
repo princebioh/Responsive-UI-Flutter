@@ -10,12 +10,19 @@ class HomePage extends StatelessWidget {
     final orientation = MediaQuery.of(context).orientation;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Responsive App"),
-      ),
-      body: Center(
-        child: Text("Width = $width\nHeight = $height\nOrientation = $orientation"),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text("Responsive App"),
+        ),
+        body: LayoutBuilder(builder: (context, constrains) {
+          if (constrains.maxWidth > 450) {
+            return Container(
+              color: Colors.blueGrey,
+            );
+          } else {
+            return Container(
+              color: Colors.redAccent,
+            );
+          }
+        }));
   }
 }
